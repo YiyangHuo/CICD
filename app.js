@@ -1,22 +1,21 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+
+const app = express();
 
 process.title = process.argv[2];
 
-var port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '3000');
 
-app.get('/', function (req, res) {
-
-		  res.send('FSE TAs are amazing!');
-
+app.get('/', (req, res) => {
+		  res.send('FSE TAs are amazing 123!');
 });
 
-app.listen(port, function () {
-		  console.log('Example app listening on port ' + port);
+app.listen(port, () => {
+		  console.log(`Example app listening on port ${port}`);
 });
 
 function normalizePort(val) {
-  var port = parseInt(val, 10);
+  const port = parseInt(val, 10);
 
   if (isNaN(port)) {
     // named pipe
@@ -30,4 +29,3 @@ function normalizePort(val) {
 
   return false;
 }
-
